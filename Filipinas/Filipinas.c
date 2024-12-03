@@ -89,13 +89,16 @@ int main() {
     }
 
     //Carregar as imagens da introdução
-    ALLEGRO_BITMAP* introducao1 = al_load_bitmap("src/introducao1.png");
+    ALLEGRO_BITMAP* introducao1 = al_load_bitmap("src/introducao1-2.png");
     ALLEGRO_BITMAP* introducao2 = al_load_bitmap("src/introducao2.png");
-    ALLEGRO_BITMAP* introducao3 = al_load_bitmap("src/introducao3.png");
+    ALLEGRO_BITMAP* introducao3 = al_load_bitmap("src/introducao3-2.png");
     ALLEGRO_BITMAP* introducao4 = al_load_bitmap("src/introducao4.png");
     ALLEGRO_BITMAP* introducao6 = al_load_bitmap("src/introducao6.png");
     ALLEGRO_BITMAP* introducao7 = al_load_bitmap("src/introducao7.png");
     ALLEGRO_BITMAP* introducao8 = al_load_bitmap("src/introducao8.png");
+
+    //Carregar imagem da explicação
+    ALLEGRO_BITMAP* explicacao1 = al_load_bitmap("src/explicacao1.png");
 
     //Carregar as imagens da conclusão
     ALLEGRO_BITMAP* conclusao1= al_load_bitmap("src/introducao2.png");
@@ -112,11 +115,30 @@ int main() {
     ALLEGRO_BITMAP* level_parede2 = al_load_bitmap("src/fase1-porta.png");
     ALLEGRO_BITMAP* level_3 = al_load_bitmap("src/fase1-semPorta.png");
     ALLEGRO_BITMAP* level_parede3 = al_load_bitmap("src/fase1-porta.png");
-    if (!introducao1 || !introducao2|| !introducao3 || !introducao4  || !introducao6 || !introducao7 || !introducao8 ||  !conclusao1 || !fimpng || !level_1 || !level_parede1 || !level_2 || !level_parede2 || !level_3 || !level_parede3) {
-        fprintf(stderr, "Falha ao carregar uma ou mais imagens de fase.\n");
+    if (!introducao1 || !introducao2|| !introducao3 || !introducao4  || !introducao6 || !introducao7 || !introducao8  || !explicacao1 ||  !conclusao1 || !fimpng || !level_1 || !level_parede1 || !level_2 || !level_parede2 || !level_3 || !level_parede3) {
+        fprintf(stderr, "Falha ao carregar a tela de fim de jogo.\n");
         al_destroy_bitmap(sprite_felipe);
         al_destroy_bitmap(sprite_bowling_ball);
         al_destroy_bitmap(sprite_pity);
+        al_destroy_bitmap(sprite_pity);
+        al_destroy_bitmap(introducao1);
+        al_destroy_bitmap(introducao2);
+        al_destroy_bitmap(introducao3);
+        al_destroy_bitmap(introducao4);
+        al_destroy_bitmap(introducao6);
+        al_destroy_bitmap(introducao7);
+        al_destroy_bitmap(introducao8);
+        al_destroy_bitmap(explicacao1);
+        al_destroy_bitmap(conclusao1);
+        al_destroy_bitmap(fimpng);
+        al_destroy_bitmap(level_parede1);
+        al_destroy_bitmap(level_parede2);
+        al_destroy_bitmap(level_parede3);
+        al_destroy_bitmap(level_1);
+        al_destroy_bitmap(level_2);
+        al_destroy_bitmap(level_3);
+
+
         al_destroy_display(display);
         return -1;
     }
@@ -136,6 +158,7 @@ int main() {
         al_destroy_bitmap(introducao6);
         al_destroy_bitmap(introducao7);
         al_destroy_bitmap(introducao8);
+        al_destroy_bitmap(explicacao1);
         al_destroy_bitmap(conclusao1);
         al_destroy_bitmap(fimpng);
         al_destroy_bitmap(level_parede1);
@@ -164,6 +187,7 @@ int main() {
         al_destroy_bitmap(introducao6);
         al_destroy_bitmap(introducao7);
         al_destroy_bitmap(introducao8);
+        al_destroy_bitmap(explicacao1);
         al_destroy_bitmap(conclusao1);
         al_destroy_bitmap(fimpng);
         al_destroy_bitmap(level_parede1);
@@ -227,6 +251,7 @@ int main() {
         al_destroy_bitmap(introducao6);
         al_destroy_bitmap(introducao7);
         al_destroy_bitmap(introducao8);
+        al_destroy_bitmap(explicacao1); 
         al_destroy_bitmap(conclusao1);
         al_destroy_bitmap(fimpng);
         al_destroy_bitmap(level_parede1);
@@ -300,7 +325,7 @@ int main() {
             // Verificar se o jogador chegou ao final da fase
             if (felipe_x >= width_screen - width_sprite_felipe) {
                 //Aumenta a fase atual
-                if (level < 11) {
+                if (level < 12) {
                     felipe_x = 10;
                     level++;
                 }
@@ -354,9 +379,11 @@ int main() {
             }
         }
 
-        if (event.type == ALLEGRO_EVENT_KEY_DOWN) { // Tecla pressionada
+        //Implementação da tecla enter e as fases que ela pode ser usada
+        
+        if (event.type == ALLEGRO_EVENT_KEY_DOWN) { 
             if (event.keyboard.keycode == ALLEGRO_KEY_ENTER) {
-                if (level == 1 || level == 3 || level == 5 || level == 6 || level >= 11) {
+                if (level == 1 || level == 3 || level == 5 || level == 6 || level <= 11) {
                     
                     level++;
                 }
@@ -634,6 +661,14 @@ int main() {
             }
 
             if (level == 11) {
+                al_draw_bitmap(explicacao1, 0, 0, 0);
+                felipe_x = 20;
+                felipe_y = 1200;
+
+
+
+            }
+            if (level == 12) {
                 al_draw_bitmap(conclusao1, 0, 0, 0);
 
 
@@ -678,6 +713,7 @@ int main() {
     al_destroy_bitmap(introducao6);
     al_destroy_bitmap(introducao7);
     al_destroy_bitmap(introducao8);
+    al_destroy_bitmap(explicacao1);
     al_destroy_bitmap(conclusao1);
     al_destroy_bitmap(fimpng);
     al_destroy_bitmap(level_parede1);

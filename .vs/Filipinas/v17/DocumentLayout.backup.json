@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Jo\u00E3o Michael\\Desktop\\O enigma de Einstein\\FilipinasPI2\\",
+  "WorkspaceRootPath": "C:\\Users\\Jo\u00E3o Michael\\Desktop\\O enigma de Einstein\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{199C8B26-397D-4D76-B2F3-D43748CBEF3A}|Filipinas\\Filipinas.vcxproj|C:\\Users\\Jo\u00E3o Michael\\Desktop\\O enigma de Einstein\\FilipinasPI2\\Filipinas\\Filipinas.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{199C8B26-397D-4D76-B2F3-D43748CBEF3A}|Filipinas\\Filipinas.vcxproj|C:\\Users\\Jo\u00E3o Michael\\Desktop\\O enigma de Einstein\\Filipinas\\Filipinas.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{199C8B26-397D-4D76-B2F3-D43748CBEF3A}|Filipinas\\Filipinas.vcxproj|solutionrelative:Filipinas\\Filipinas.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -24,11 +24,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Filipinas.c",
-              "DocumentMoniker": "C:\\Users\\Jo\u00E3o Michael\\Desktop\\O enigma de Einstein\\FilipinasPI2\\Filipinas\\Filipinas.c",
+              "DocumentMoniker": "C:\\Users\\Jo\u00E3o Michael\\Desktop\\O enigma de Einstein\\Filipinas\\Filipinas.c",
               "RelativeDocumentMoniker": "Filipinas\\Filipinas.c",
-              "ToolTip": "C:\\Users\\Jo\u00E3o Michael\\Desktop\\O enigma de Einstein\\FilipinasPI2\\Filipinas\\Filipinas.c",
+              "ToolTip": "C:\\Users\\Jo\u00E3o Michael\\Desktop\\O enigma de Einstein\\Filipinas\\Filipinas.c",
               "RelativeToolTip": "Filipinas\\Filipinas.c",
-              "ViewState": "AgIAAKUCAAAAAAAAAAAAALQCAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADUBAAAAAAAAAAAAAEcBAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-11-14T13:27:36.084Z",
               "EditorCaption": ""
