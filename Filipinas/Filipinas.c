@@ -25,7 +25,7 @@ const int num_jump_sprites_felipe = 1;
 // sprite bowling ball
 float pos_bowling_ball_x = 58; //Aqui decidimos aonde queremos começar a cortar a imagem a partir canto superior esquerdo
 float pos_bowling_ball_y = 58; // Altura para cortarmos no y
-int bowling_ball_x = -50; // Canto superior esquerdo onde será desenhado o sprite na tela
+int bowling_ball_x = -90; // Canto superior esquerdo onde será desenhado o sprite na tela
 int bowling_ball_y = 20; // Altura do sprite que ser desenhado
 int gravity_bowling_ball = 10; // Velocidade de queda do sprite
 int count_bowling_ball = 0;
@@ -95,7 +95,7 @@ int main() {
     ALLEGRO_BITMAP* introducao4 = al_load_bitmap("src/introducao4.png");
     ALLEGRO_BITMAP* introducao6 = al_load_bitmap("src/introducao6.png");
     ALLEGRO_BITMAP* introducao7 = al_load_bitmap("src/introducao7.png");
-    ALLEGRO_BITMAP* introducao8 = al_load_bitmap("src/introducao8.png");
+    ALLEGRO_BITMAP* introducao8 = al_load_bitmap("src/Sala da Porta 105.png");
     ALLEGRO_BITMAP* introducao9 = al_load_bitmap("src/fase1 intro.png");
 
 
@@ -527,7 +527,7 @@ int main() {
 
 
 
-                if (felipe_x == 1000) {
+                if (felipe_x == 800) {
                     felipe_x = 20;
                     level++;
                 }
